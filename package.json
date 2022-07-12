@@ -1,7 +1,7 @@
 {
   "name": "recipe-app",
   "version": "0.1.0",
-  "homepage": "https:prabhkaur301.github.io/Recipe-Hub",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@splidejs/react-splide": "^0.7.8",
