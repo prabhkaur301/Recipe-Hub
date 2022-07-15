@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const Wrapper=styled.div`
+const Wrapper = styled.div`
 margin: 3rem 0rem;`
 
-const Card=styled.div`
+const Card = styled.div`
 min-height:16rem;
 border-radius:20px;
 position:relative;
@@ -29,7 +29,7 @@ p{
     text-align:center;
 }
 `
-const VeggieCard=styled(Card)`
+const VeggieCard = styled(Card)`
 min-height:12rem;
 
 p{
@@ -41,7 +41,7 @@ p{
 
 }
 `
-const Gradient=styled.div`
+const Gradient = styled.div`
 z-index:3;
 position:absolute;
 width:100%;
@@ -49,20 +49,17 @@ height:100%;
 border-radius:20px;
 background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5))`
 
-const List=styled.div`
+const List = styled.div`
 display:flex;
 gap:2rem;
 width:40%;
 margin:2rem auto;
 `
-const StyledForm=styled.form
-`
-margin:2rem 2rem;
+const StyledForm = styled.form  `
 width:80%;
 position:relative;
 
 input{
-    
     border:none;
     background:linear-gradient(35deg,#494949,#313131);
     font-size:1.2rem;
@@ -86,4 +83,4 @@ svg{
 }
 `
 
-export {Wrapper, Card,Gradient,VeggieCard,List,StyledForm}
+export { Wrapper, Card, Gradient, VeggieCard, List, StyledForm }

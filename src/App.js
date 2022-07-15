@@ -3,11 +3,17 @@ import styled from 'styled-components'
 import Pages from './Pages/Pages';
 import Category from './Components/Category';
 import Search from './Components/Search'
+import {Logo, Nav} from './Pages/Style'
+import {GiKnifeFork} from 'react-icons/gi'
 import {BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
     <BrowserRouter>
+    <Nav>
+      <GiKnifeFork/>
+      <Logo to={"/"}>Recipe Hub</Logo>
+    </Nav>
     <Box>
     <Search/>
     <Category/>

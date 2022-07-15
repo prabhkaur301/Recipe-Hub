@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import { BsFillArrowLeftCircleFill,BsFillBookmarkHeartFill } from "react-icons/bs";
+
 const Grid=styled.div`
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
@@ -17,12 +19,10 @@ h4{
     text-align:center;
     padding:1rem;
 }
+
 `
 const CLink=styled(NavLink)`
 color:#313131;
-&.active{
-    color:#706e6e;
-}
 `
 
 const DetailsWrapper=styled.div`
@@ -64,10 +64,61 @@ width:40%;
 const Info=styled.div`
 margin-left:8rem;
 width:60%;
-
-
-
 `
 
+const Logo=styled(Link) `
+font-size:1.2rem;
+font-family:Lobster,cursive;
+font-weight:bold;
+text-decoration:none;
+color:#313131;
 
-export {Card,Grid,Info,Button,DetailsWrapper,Col1,CLink};
+`
+const Nav=styled.div`
+padding:2rem 0rem;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+
+svg{
+    font-size:2rem;
+}
+
+`
+const Box=styled.div`
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+`
+const Back=styled(BsFillArrowLeftCircleFill)`
+width: 3rem;
+height: 3rem;
+cursor: pointer;
+position:fixed;
+color:#313131;
+left:1%;
+bottom:5%;
+transform: scale(0.8);
+transition: 0.5s all linear;
+&:hover {
+  transform: scale(0.9);
+}
+
+}
+`
+const SaveIcon=styled(BsFillBookmarkHeartFill)`
+width: 3rem;
+height: 3rem;
+cursor: pointer;
+color:#313131;
+transform: scale(0.8);
+transition: 0.5s all linear;
+&:hover {
+  transform: scale(0.9);
+}
+
+}
+`
+
+export {Card,Grid,Info,Button,DetailsWrapper,Col1,CLink,Nav,Logo,Box,Back,SaveIcon};
