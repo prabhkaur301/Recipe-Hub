@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { useParams,useNavigate } from "react-router-dom";
-import { Info, DetailsWrapper, Button, Col1,Back,SaveIcon } from "./Style";
+import { Info, DetailsWrapper, Button, Col1,Back,ButtonGroup } from "./Style";
 
 
 const Recipe = () => {
@@ -38,6 +38,7 @@ const Recipe = () => {
         {/* <SaveIcon onClick={saveData}/> */}
       </Col1>
       <Info>
+        <ButtonGroup>
         <Button
           className={activeTab === "instructions" ? "active" : ""}
           onClick={() => setActiveTab("instructions")}
@@ -50,6 +51,7 @@ const Recipe = () => {
         >
           Ingredients
         </Button>
+        </ButtonGroup>
         {activeTab === "instructions" && (
           <div style={{ marginTop: "1rem" }}>
             <p dangerouslySetInnerHTML={{ __html: recipeData.summary }}></p>

@@ -42,8 +42,8 @@ const Category = () => {
   );
 };
 const SLink = styled(NavLink)`
-  width: 6rem;
-  height: 6rem;
+  width: 6em;
+  height: 6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,6 +56,15 @@ const SLink = styled(NavLink)`
   transform: scale(0.8);
   transition: 0.5s all linear;
   text-decoration: none;
+   
+  @media (max-width:480px){
+    width:4rem;
+    height:4rem;
+    padding:1.2rem 1.2rem;
+    font-size:0.8rem;
+    border-radius: 10%;
+  }
+ 
   &:hover {
     transform: scale(0.9);
     background: linear-gradient(35deg, #494949, #313131);
@@ -68,6 +77,10 @@ const SLink = styled(NavLink)`
   svg {
     margin-bottom: 0.4rem;
     font-size: 1.5rem;
+
+    @media (max-width:480px){
+      display:none;
+    }
   }
   &.active {
     background: linear-gradient(to right, #f27121, #e94057);

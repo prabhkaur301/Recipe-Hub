@@ -30,6 +30,11 @@ margin-top:6rem;
 margin-bottom:5rem;
 display:flex;
 
+@media (max-width:480px){
+    flex-direction:column;
+    width:100%;
+    margin:1rem 1rem;
+}
 .active{
     background:linear-gradient(35deg,#494949,#313131);
     color:white;
@@ -49,21 +54,43 @@ img{
     width:100%;
 }
 `
+const ButtonGroup=styled.div`
+display:flex;
+gap:2rem;
+margin:1rem 1rem;
+`
 const Button=styled.button`
 padding:1rem 2rem;
 color:#313131;
 background:white;
 border:2px solid #313131;
 font-weight:600;
-margin-right:2rem;
+
+@media(max-width:480px){
+    width:50%;
+    display:inline-block;
+    padding:0.5rem 0.5rem;
+    margin-right:0;
+
+}
 `
 const Col1=styled.div`
 width:40%;
+
+@media(max-width:480px){
+width:90%;
+}
 `
 
 const Info=styled.div`
 margin-left:8rem;
 width:60%;
+
+@media(max-width:480px){
+    width:90%;
+    margin-left:0rem;
+
+    }
 `
 
 const Logo=styled(Link) `
@@ -121,4 +148,4 @@ transition: 0.5s all linear;
 }
 `
 
-export {Card,Grid,Info,Button,DetailsWrapper,Col1,CLink,Nav,Logo,Box,Back,SaveIcon};
+export {Card,Grid,Info,Button,ButtonGroup,DetailsWrapper,Col1,CLink,Nav,Logo,Box,Back,SaveIcon};

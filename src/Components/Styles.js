@@ -54,6 +54,11 @@ display:flex;
 gap:2rem;
 width:40%;
 margin:2rem auto;
+
+@media (max-width:480px){
+width:100%;
+gap:0.8rem;
+}
 `
 const StyledForm = styled.form  `
 width:80%;
@@ -68,6 +73,12 @@ input{
     outline:none;
     border-radius:10px;
     width:100%;
+    display:flex;
+    align-item:center;
+
+    @media (max-width:480px){
+        padding:0.5rem 3rem;
+    }
 
 }
 
@@ -78,6 +89,10 @@ svg{
     transform:translate(50%,100%);
     font-size:1.3rem;
     color:white;
+    @media (max-width:480px){
+        top:2%;
+        transform:translate(50%,50%);
+    }
     
     
 }
